@@ -101,9 +101,6 @@ public class HoyoDaily {
         }
 
         WebhookEmbedBuilder builder = new WebhookEmbedBuilder()
-                .setAuthor(new WebhookEmbed.EmbedAuthor("Powered by - Hoyoverse-API",
-                        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-                        "https://github.com/zvyap/Hoyoverse-API"))
                 .setTimestamp(OffsetDateTime.now())
                 .setColor(color.getRGB())
                 .setTitle(new WebhookEmbed.EmbedTitle(title, null))
