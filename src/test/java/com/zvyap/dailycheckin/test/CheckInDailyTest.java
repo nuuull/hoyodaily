@@ -30,8 +30,17 @@ public class CheckInDailyTest {
                                 .name(System.getenv("WEBHOOK_NAME"))
                                 .build())
                         .game(GameType.GENSHIN_IMPACT)
-                        .build()
+                        .build(),
 
+                CheckInAction.builder()
+                        .token(HoyoToken.of(System.getenv("USER_2_ID"), System.getenv("USER_2_TOKEN")))
+                        .webhook(WebhookInfo.builder()
+                                .url(System.getenv("WEBHOOK_URL"))
+                                .avatar(System.getenv("WEBHOOK_AVATAR"))
+                                .name(System.getenv("WEBHOOK_NAME"))
+                                .build())
+                        .game(GameType.HONKAI_STAR_RAIL)
+                        .build(),
 
         ));
     }
