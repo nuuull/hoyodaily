@@ -40,7 +40,7 @@ public class CheckInDailyTest {
                                 .name(System.getenv("WEBHOOK_NAME"))
                                 .build())
                         .game(GameType.HONKAI_STAR_RAIL)
-                        .build(),
+                        .build()
 
         ));
     }
