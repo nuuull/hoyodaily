@@ -43,3 +43,12 @@ jobs:
         WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
         WEBHOOK_AVATAR: ${{vars.WEBHOOK_AVATAR}}
         WEBHOOK_NAME: ${{vars.WEBHOOK_NAME}}
+
+  keepalive:
+      name: Keepalive
+      runs-on: ubuntu-latest
+      permissions:
+        actions: write
+      steps:
+        - uses: actions/checkout@v4
+        - uses: gautamkrishnar/keepalive-workflow@v2
