@@ -1,4 +1,5 @@
 https://github.com/thesadru/genshin.py/archive/refs/heads/dev.zip
+python-dotenv
 asyncio
 aiohttp
 rsa
