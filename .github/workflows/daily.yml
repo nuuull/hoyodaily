@@ -1,0 +1,44 @@
+name: Daily Check In Task
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "15 16 * * *"
+  
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Daily Check-In
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run script
+      run: python main.py
+      env:
+        MY_UID: ${{ secrets.MY_UID }}
+        MY_MID: ${{ secrets.MY_MID }}
+        MY_TOKEN: ${{ secrets.MY_TOKEN }}
+        ALT_UID: ${{ secrets.ALT_UID }}
+        ALT_MID: ${{ secrets.ALT_MID }}
+        ALT_TOKEN: ${{ secrets.ALT_TOKEN }}
+        WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
+        WEBHOOK_AVATAR: ${{vars.WEBHOOK_AVATAR}}
+        WEBHOOK_NAME: ${{vars.WEBHOOK_NAME}}
+
+  keepalive:
+      name: Keepalive
+      runs-on: ubuntu-latest
+      permissions:
+        actions: write
+      steps:
+        - uses: actions/checkout@v4
+        - uses: gautamkrishnar/keepalive-workflow@v2

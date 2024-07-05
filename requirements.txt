@@ -1,0 +1,4 @@
+https://github.com/thesadru/genshin.py/archive/refs/heads/dev.zip
+asyncio
+aiohttp
+rsa
