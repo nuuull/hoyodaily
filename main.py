@@ -61,20 +61,20 @@ def build_embed(task_info):
         "value": task_info["nickname"]
       },
       {
-        "name": "Days Checked In",
-        "value": str(task_info["days_checked_in"])
-      },
-      {
-        "name": "Days Missing",
-        "value": str(task_info["days_missing"])
-      },
-      {
         "name": "Rewards Today",
         "value": task_info["reward_today"]
       },
       {
         "name": "Rewards Tommorow",
         "value": task_info["reward_tommorow"]
+      },
+      {
+        "name": "Days Checked In",
+        "value": str(task_info["days_checked_in"])
+      },
+      {
+        "name": "Days Missing",
+        "value": str(task_info["days_missing"])
       }
     ],
     "author": {
