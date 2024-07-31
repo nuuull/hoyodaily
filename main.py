@@ -28,7 +28,7 @@ async def main():
       )
 
       rewards_today = rewards[info.claimed_rewards - 1]
-      rewards_tommorow = rewards[info.claimed_rewards]
+      rewards_tommorow = rewards[info.claimed_rewards if info.claimed_rewards < len(rewards) else 0]
       
       discord_embeds.append(build_embed({
         "game": game,
