@@ -1,4 +1,4 @@
-https://github.com/thesadru/genshin.py/archive/refs/heads/dev.zip
+genshin
 python-dotenv
 asyncio
 aiohttp
