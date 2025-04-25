@@ -41,4 +41,4 @@ jobs:
         actions: write
       steps:
         - uses: actions/checkout@v4
-        - uses: gautamkrishnar/keepalive-workflow@v2
+        - uses: MrPhil/keepalive-workflow-version2@master
